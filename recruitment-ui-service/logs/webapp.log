@@ -1,0 +1,52 @@
+2021-10-03 22:22:37,763 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-10-03 22:35:11,588 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:11] "GET / HTTP/1.1" 200 -
+2021-10-03 22:35:16,352 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:16] "[33mGET /customer HTTP/1.1[0m" 404 -
+2021-10-03 22:35:21,159 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:21] "GET /job HTTP/1.1" 200 -
+2021-10-03 22:35:23,608 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:23] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:35:28,759 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:28] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-03 22:35:33,386 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:33] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:35:34,620 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:34] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-03 22:35:36,536 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:36] "GET /job HTTP/1.1" 200 -
+2021-10-03 22:35:38,082 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:38] "GET /listjobs HTTP/1.1" 200 -
+2021-10-03 22:35:39,717 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:35:39] "[33mGET /customer HTTP/1.1[0m" 404 -
+2021-10-03 22:38:27,915 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-10-03 22:38:33,403 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:38:33] "GET /customer HTTP/1.1" 200 -
+2021-10-03 22:38:38,241 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:38:38] "GET /addcustomer HTTP/1.1" 200 -
+2021-10-03 22:38:50,363 - webapp - ERROR - Exception on /addcustomer [POST]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/webapp.py", line 95, in managecustomer
+    customerUIService.save_job(
+AttributeError: module 'customerUIService' has no attribute 'save_job'
+2021-10-03 22:38:50,365 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:38:50] "[35m[1mPOST /addcustomer HTTP/1.1[0m" 500 -
+2021-10-03 22:40:10,492 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-10-03 22:40:14,590 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:40:14] "POST /addcustomer HTTP/1.1" 200 -
+2021-10-03 22:40:17,819 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:40:17] "GET /addcustomer HTTP/1.1" 200 -
+2021-10-03 22:40:19,312 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:40:19] "GET /customer HTTP/1.1" 200 -
+2021-10-03 22:40:20,741 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:40:20] "GET /listcustomers HTTP/1.1" 200 -
+2021-10-03 22:41:54,816 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:41:54] "GET /customer HTTP/1.1" 200 -
+2021-10-03 22:41:56,469 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:41:56] "GET /addcustomer HTTP/1.1" 200 -
+2021-10-03 22:42:04,889 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:04] "POST /addcustomer HTTP/1.1" 200 -
+2021-10-03 22:42:06,186 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:06] "GET /addcustomer HTTP/1.1" 200 -
+2021-10-03 22:42:07,996 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:07] "GET /customer HTTP/1.1" 200 -
+2021-10-03 22:42:08,857 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:08] "GET /listcustomers HTTP/1.1" 200 -
+2021-10-03 22:42:12,677 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:12] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:42:14,114 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:14] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-03 22:42:14,821 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:14] "GET /job HTTP/1.1" 200 -
+2021-10-03 22:42:17,253 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:17] "GET /listjobs HTTP/1.1" 200 -
+2021-10-03 22:42:20,065 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:20] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:42:21,927 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:21] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-03 22:42:31,590 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:31] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:42:35,101 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:35] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-03 22:42:53,969 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:53] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-03 22:42:56,400 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:56] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:42:57,863 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:42:57] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-03 22:43:01,310 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:43:01] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 22:43:02,672 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 22:43:02] "GET /addcandidate HTTP/1.1" 200 -

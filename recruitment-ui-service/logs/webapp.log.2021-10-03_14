@@ -1,0 +1,10 @@
+2021-10-03 14:32:53,628 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:32:53] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 14:32:55,797 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:32:55] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-03 14:33:15,658 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:33:15] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-03 14:33:19,297 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:33:19] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 14:33:20,683 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:33:20] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-03 14:36:28,303 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:36:28] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 14:36:30,041 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:36:30] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-03 14:36:42,423 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:36:42] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-03 14:36:44,612 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:36:44] "GET /candidate HTTP/1.1" 200 -
+2021-10-03 14:36:45,722 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 14:36:45] "GET /listcandidates HTTP/1.1" 200 -

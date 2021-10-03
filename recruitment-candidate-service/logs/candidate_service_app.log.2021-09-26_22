@@ -1,0 +1,8 @@
+2021-09-26 22:48:33,545 - candidate_service - INFO - In Ger All Candidates API
+2021-09-26 22:48:33,547 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:48:33] "GET /candidateservice/getallcandidates HTTP/1.1" 200 -
+2021-09-26 22:48:36,831 - candidate_service - INFO - In Ger All Candidates API
+2021-09-26 22:48:36,832 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:48:36] "GET /candidateservice/getallcandidates HTTP/1.1" 200 -
+2021-09-26 22:51:06,803 - candidate_service - INFO - In Ger All Candidates API
+2021-09-26 22:51:06,803 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:51:06] "GET /candidateservice/getallcandidates HTTP/1.1" 200 -
+2021-09-26 22:51:11,040 - candidate_service - INFO - In Ger All Candidates API
+2021-09-26 22:51:11,040 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:51:11] "GET /candidateservice/getallcandidates HTTP/1.1" 200 -

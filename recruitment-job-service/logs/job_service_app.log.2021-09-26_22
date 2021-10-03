@@ -1,0 +1,13 @@
+2021-09-26 22:42:49,868 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-26 22:42:49,868 - werkzeug - INFO -  * Running on http://127.0.0.1:9000/ (Press CTRL+C to quit)
+2021-09-26 22:51:00,472 - job_service - INFO - In Ger All Jobs API
+2021-09-26 22:51:00,473 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:51:00] "GET /jobservice/getalljobs HTTP/1.1" 200 -
+2021-09-26 22:51:14,885 - job_service - INFO - In Ger All Jobs API
+2021-09-26 22:51:14,885 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:51:14] "GET /jobservice/getalljobs HTTP/1.1" 200 -
+2021-09-26 22:52:17,386 - job_service_app - INFO - JSON Request: {'clientname': 'sdaf', 'jobprofile': 'ewaf', 'jobrequirements': 'asdf'}
+2021-09-26 22:52:17,386 - job_service_app - INFO - clientname: sdaf
+2021-09-26 22:52:17,386 - job_service_app - INFO - Going to call add job API...
+2021-09-26 22:52:17,386 - job_service - INFO - In Add Job API
+2021-09-26 22:52:17,386 - job_service - INFO - clientname sdaf jobprofile ewaf jobrequirements asdf
+2021-09-26 22:52:17,386 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 22:52:17] "POST /jobservice/addjob HTTP/1.1" 200 -

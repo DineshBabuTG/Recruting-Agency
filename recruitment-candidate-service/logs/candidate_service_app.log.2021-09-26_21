@@ -1,0 +1,7 @@
+2021-09-26 21:37:54,746 - candidate_service - INFO - In Ger All Candidates API
+2021-09-26 21:37:54,747 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 21:37:54] "GET /candidateservice/getAllCandidates HTTP/1.1" 200 -
+2021-09-26 21:38:04,982 - candidate_service - INFO - In Ger All Candidates API
+2021-09-26 21:38:04,982 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 21:38:04] "GET /candidateservice/getAllCandidates HTTP/1.1" 200 -
+2021-09-26 22:34:07,312 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-26 22:34:07,312 - werkzeug - INFO -  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)

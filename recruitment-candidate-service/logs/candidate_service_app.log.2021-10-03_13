@@ -1,0 +1,14 @@
+2021-10-03 13:31:29,621 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-10-03 13:31:29,622 - werkzeug - INFO -  * Running on http://10.104.68.227:8000/ (Press CTRL+C to quit)
+2021-10-03 13:31:34,043 - candidate_service - INFO - In Ger All Candidates API
+2021-10-03 13:31:34,044 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 13:31:34] "GET /candidateservice/getallcandidates HTTP/1.1" 200 -
+2021-10-03 13:33:06,445 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-10-03 13:33:06,445 - werkzeug - INFO -  * Running on http://10.104.68.227:8000/ (Press CTRL+C to quit)
+2021-10-03 13:33:11,888 - candidate_service - INFO - In Ger All Candidates API
+2021-10-03 13:33:11,888 - candidate_service - INFO - [{'name': 'test1', 'address': 'abc', 'qualification': 'sadf1', 'jobskill': 'asdf1', 'yearsofexperience': '5'}, {'name': 'test2', 'address': 'abc', 'qualification': 'sadf2', 'jobskill': 'asdf2', 'yearsofexperience': '5'}]
+2021-10-03 13:33:11,889 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2021 13:33:11] "GET /candidateservice/getallcandidates HTTP/1.1" 200 -
+2021-10-03 14:32:48,711 - werkzeug - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-10-03 14:32:48,711 - werkzeug - INFO -  * Running on http://10.104.68.227:8000/ (Press CTRL+C to quit)
