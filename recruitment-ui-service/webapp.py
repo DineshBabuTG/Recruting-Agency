@@ -1,12 +1,11 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template
 from forms import AddCandidateForm
 from forms import AddJobForm
 from forms import AddCustomerForm
-import logging
 import logging.config
-import candidateUIService
-import jobUIService
-import customerUIService
+import candidateuiservice
+import jobuiservice
+import customeruiservice
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dinasecretkey'
@@ -17,37 +16,37 @@ logger = logging.getLogger('webapp')
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    print("Home Page Loaded Successfully")
+    logger.info("Home Page Loaded Successfully")
 
     return render_template("base.html")
 
 @app.route("/candidate", methods=["GET", "POST"])
 def candidate():
-    print("Candidate Page Loaded Successfully")
+    logger.info("Candidate Page Loaded Successfully")
 
     return render_template("candidate.html")
 
 @app.route("/job", methods=["GET", "POST"])
 def job():
-    print("Job Page Loaded Successfully")
+    logger.info("Job Page Loaded Successfully")
 
     return render_template("job.html")
 
 @app.route("/customer", methods=["GET", "POST"])
 def customer():
-    print("Customer Page Loaded Successfully")
+    logger.info("Customer Page Loaded Successfully")
 
     return render_template("customer.html")
 
 @app.route("/addcandidate", methods=["GET", "POST"])
 def managecandidate():
     form = AddCandidateForm()
-    print("Candidate Form Loaded Successfully")
-    print(form.validate_on_submit())
+    logger.info("Candidate Form Loaded Successfully")
+    logger.info(form.validate_on_submit())
     if form.validate_on_submit():
-        print("Add Candidate button clicked")
-        print("Name is: " + form.name.data)
-        candidateUIService.save_candidate(
+        logger.info("Add Candidate button clicked")
+        logger.info("Name is: " + form.name.data)
+        candidateuiservice.save_candidate(
             name=form.name.data,
             address=form.address.data,
             qualification=form.qualification.data,
@@ -59,19 +58,19 @@ def managecandidate():
 
 @app.route("/listcandidates")
 def listcandidates():
-    allCandidatesList = candidateUIService.get_all_candidates()
+    allCandidatesList = candidateuiservice.get_all_candidates()
 
     return render_template("candidateList.html", allCandidatesList=allCandidatesList)
 
 @app.route("/addjob", methods=["GET", "POST"])
 def managejob():
     form = AddJobForm()
-    print("Job Form Loaded Successfully")
-    print(form.validate_on_submit())
+    logger.info("Job Form Loaded Successfully")
+    logger.info(form.validate_on_submit())
     if form.validate_on_submit():
-        print("Add Job button clicked")
-        print("Client Name is: " + form.clientname.data)
-        jobUIService.save_job(
+        logger.info("Add Job button clicked")
+        logger.info("Client Name is: " + form.clientname.data)
+        jobuiservice.save_job(
             clientname=form.clientname.data,
             jobprofile=form.jobprofile.data,
             jobrequirements=form.jobrequirements.data)
@@ -80,19 +79,19 @@ def managejob():
 
 @app.route("/listjobs")
 def listjobs():
-    allJobsList = jobUIService.get_all_jobs()
+    allJobsList = jobuiservice.get_all_jobs()
 
     return render_template("jobList.html", allJobsList=allJobsList)
 
 @app.route("/addcustomer", methods=["GET", "POST"])
 def managecustomer():
     form = AddCustomerForm()
-    print("Customer Form Loaded Successfully")
-    print(form.validate_on_submit())
+    logger.info("Customer Form Loaded Successfully")
+    logger.info(form.validate_on_submit())
     if form.validate_on_submit():
-        print("Add Customer button clicked")
-        print("Client Name is: " + form.name.data)
-        customerUIService.save_customer(
+        logger.info("Add Customer button clicked")
+        logger.info("Client Name is: " + form.name.data)
+        customeruiservice.save_customer(
             name=form.name.data,
             address=form.address.data)
         return render_template("customerThankyou.html")
@@ -101,9 +100,9 @@ def managecustomer():
 
 @app.route("/listcustomers")
 def listcustomers():
-    allCustomersList = customerUIService.get_all_customers()
+    allCustomersList = customeruiservice.get_all_customers()
 
     return render_template("customerList.html", allCustomersList=allCustomersList)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0',port=5000)

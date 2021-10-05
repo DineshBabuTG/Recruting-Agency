@@ -1,7 +1,5 @@
 from flask import Flask, abort, request
-import logging
 import logging.config
-import json
 import customer_service
 app = Flask(__name__)
 
@@ -39,4 +37,4 @@ def get_All_Customers():
     return customersList
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=9001)
+    app.run(host='0.0.0.0',port=8001)

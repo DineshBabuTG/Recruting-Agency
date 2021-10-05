@@ -1,12 +1,6 @@
 """Service to manage customers
-
-How to use:
-
-    firefly service.method
-
 """
 import os
-import numpy
 import json
 import logging
 import customer_dao

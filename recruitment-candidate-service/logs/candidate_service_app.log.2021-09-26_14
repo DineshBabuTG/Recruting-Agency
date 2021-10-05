@@ -1,7 +1,0 @@
-2021-09-26 14:29:49,081 - werkzeug - WARNING -  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-2021-09-26 14:29:49,081 - werkzeug - INFO -  * Running on http://10.104.68.227:8000/ (Press CTRL+C to quit)
-2021-09-26 14:30:07,588 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 14:30:07] "GET / HTTP/1.1" 200 -
-2021-09-26 14:30:07,724 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 14:30:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2021-09-26 14:30:30,380 - candidate_service - INFO - In Ger All Candidates API
-2021-09-26 14:30:30,385 - werkzeug - INFO - 127.0.0.1 - - [26/Sep/2021 14:30:30] "GET /candidateservice/getAllCandidates HTTP/1.1" 200 -

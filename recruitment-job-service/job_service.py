@@ -5,8 +5,6 @@ How to use:
     firefly service.method
 
 """
-import os
-import numpy
 import json
 import logging
 import job_dao

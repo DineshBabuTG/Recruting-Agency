@@ -1,7 +1,5 @@
 from flask import Flask, abort, request
-import logging
 import logging.config
-import json
 import candidate_service
 app = Flask(__name__)
 

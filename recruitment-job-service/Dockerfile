@@ -8,7 +8,7 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 COPY . /app
-EXPOSE 5000
+EXPOSE 8002
 ENTRYPOINT [ "python" ]
 
-CMD [ "webapp.py" ]
+CMD [ "job_service_app.py" ]

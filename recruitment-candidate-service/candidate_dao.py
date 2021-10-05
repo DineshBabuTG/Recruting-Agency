@@ -3,16 +3,20 @@ import random
 import mysql.connector
 import logging
 import random
+import os
 from mysql.connector import Error
 
 logger = logging.getLogger('candidate_dao')
 
 def getMySQLConnection():
     try:
+        dbhostname = os.environ['db-hostname']
+        print("Database hostname is " + dbhostname)
+        logger.info("Database hostname is " + dbhostname)
         connection_config_dict = {
             'user': 'edureka',
             'password': 'edureka',
-            'host': '127.0.0.1',
+            'host': dbhostname,
             'port': '3306',
             'database': 'dinasys',
             'raise_on_warnings': True

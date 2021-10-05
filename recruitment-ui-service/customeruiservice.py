@@ -4,16 +4,17 @@ This module manages saving the candidates and reading them back.
 """
 import logging
 import datetime
-import pathlib
 import json
+import os
 import requests
-from firefly.client import Client
 
-logger = logging.getLogger('customerUIService')
+logger = logging.getLogger('customeruiservice')
 
-customer_service_api = Client("http://127.0.0.1:9001")
+apphostname = os.environ['app-hostname']
+print("App hostname is " + apphostname)
+logger.info("App hostname is " + apphostname)
 
-customerServiceBaseurl = "http://127.0.0.1:9001"
+customerServiceBaseurl = "http://"+ apphostname + ":8001"
 addCustomerAPIURL = customerServiceBaseurl + "/customerservice/addcustomer"
 getAllCustomersAPIURL = customerServiceBaseurl + "/customerservice/getallcustomers"
 
@@ -22,20 +23,20 @@ headers = {'Content-Type': 'application/json'}
 def get_all_customers():
     """Returns all the existing customers.
     """
-    print("In Get All Customer method")
+    logger.info("In Get All Customer method")
     customers = requests.get(getAllCustomersAPIURL, headers=headers)
     responseData = json.loads(customers.content)
-    print("GET Customers: " + str(customers.content))
+    logger.info("GET Customers: " + str(customers.content))
     return responseData
 
 def save_customer(name, address):
-    print("In Save Customer method")
+    logger.info("In Save Customer method")
     timestamp = datetime.datetime.now().isoformat().replace(":","")
 
-    print("name " + name + " address " + address)
-    print("Going to trigger Add Customer API from web app")
+    logger.info("name " + name + " address " + address)
+    logger.info("Going to trigger Add Customer API from web app")
     customerPayload = dict({'name': name, 'address': address})
     data = json.dumps(customerPayload)
-    print("Request payload is: " + data)
+    logger.info("Request payload is: " + data)
 
     response = requests.post(addCustomerAPIURL, data, headers=headers)

@@ -1,7 +1,5 @@
 from flask import Flask, abort, request
-import logging
 import logging.config
-import json
 import job_service
 app = Flask(__name__)
 
@@ -39,4 +37,4 @@ def get_All_Candidates():
     return jobsList
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=9000)
+    app.run(host='0.0.0.0',port=8002)

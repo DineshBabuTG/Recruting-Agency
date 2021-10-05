@@ -1,0 +1,14 @@
+### Python ###
+
+__pycache__/
+
+
+# Note Books
+.ipynb_checkpoints/
+
+
+# Test Output Files #
+test-output/
+*.ser
+*.dot
+

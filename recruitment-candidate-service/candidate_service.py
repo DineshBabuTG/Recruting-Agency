@@ -1,12 +1,6 @@
 """Service to manage candidates
-
-How to use:
-
-    firefly service.method
-
 """
 import os
-import numpy
 import json
 import logging
 import candidate_dao
