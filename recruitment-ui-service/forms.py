@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, TextField
+from wtforms import TextField, FileField
 from wtforms.validators import Required, Email
 
 class AddCandidateForm(FlaskForm):
@@ -21,6 +21,10 @@ class AddCandidateForm(FlaskForm):
 		
     yearsofexperience = TextField(
         'YearsOfExperience',
+        validators=[Required()])
+
+    uploadresume = FileField(
+        'UploadResume',
         validators=[Required()])
 
 

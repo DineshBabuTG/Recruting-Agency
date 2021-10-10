@@ -1,5 +1,6 @@
 from flask import Flask, abort, request
 import logging.config
+import json
 import candidate_service
 app = Flask(__name__)
 
@@ -13,12 +14,13 @@ def candidate_service_home():
 
 @app.route('/candidateservice/addcandidate', methods=["POST"])
 def add_candidate():
-    if not request.json:
-        logger.info('The Request Body is not the JSON Type... Hence throwing 400 error code...')
+    if not request.files:
+        logger.info('The Request Body is not the Files Type... Hence throwing 400 error code...')
         abort(400)
-    logger.info('JSON Request: ' + str(request.json))
-    print(request.json)
-    data = request.json
+    data = json.load(request.files['data'])
+    logger.info('JSON Request: ' + str(data))
+    print(str(data))
+
     name = data['name']
     logger.info('name: ' + name)
     print('name: ' + name)
@@ -26,9 +28,12 @@ def add_candidate():
     qualification = data['qualification']
     jobskill = data['jobskill']
     yearsofexperience = data['yearsofexperience']
-
+    postedresumefile = request.files['document']
+    postedresumefilepath = "resumefiles/" + postedresumefile.filename
+    logger.info("Resume File name retrieved is " + postedresumefile.filename)
+    postedresumefile.save(postedresumefilepath)
     logger.info('Going to call add candidate API...')
-    candidateAdded =  candidate_service.addCandidate(name=name, address=address, qualification=qualification, jobskill=jobskill, yearsofexperience=yearsofexperience)
+    candidateAdded = candidate_service.addCandidate(name=name, address=address, qualification=qualification, jobskill=jobskill, yearsofexperience=yearsofexperience, postedresumefilepath=postedresumefilepath)
     print("Candidate Added " + str(candidateAdded))
     return str(candidateAdded)
 

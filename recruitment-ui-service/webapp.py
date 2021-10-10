@@ -9,6 +9,8 @@ import customeruiservice
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dinasecretkey'
+app.config['UPLOAD_FOLDER'] = 'uploaded-files/'
+app.config['MAX_CONTENT_PATH'] = 1024 * 1024 * 20
 
 logging.config.fileConfig('logging.conf')
 # create logger
@@ -46,12 +48,19 @@ def managecandidate():
     if form.validate_on_submit():
         logger.info("Add Candidate button clicked")
         logger.info("Name is: " + form.name.data)
+        #filedata = form.uploadresume.data.read().decode("latin-1")
+        #logger.info("Resume Data is: " + filedata)
+        fileInput = form.uploadresume.data
+        logger.info("Uploaded Resume file name is: " + fileInput.filename)
+        uploadedResumefilepath = "uploaded-files/" + fileInput.filename
+        fileInput.save(uploadedResumefilepath)
         candidateuiservice.save_candidate(
             name=form.name.data,
             address=form.address.data,
             qualification=form.qualification.data,
             jobskill=form.jobskill.data,
-            yearsofexperience=form.yearsofexperience.data)
+            yearsofexperience=form.yearsofexperience.data,
+            uploadedResumefilepath=uploadedResumefilepath)
         return render_template("candidateThankyou.html")
     return render_template("addCandidate.html", form=form)
 

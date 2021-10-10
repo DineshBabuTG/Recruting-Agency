@@ -4,13 +4,15 @@ import mysql.connector
 import logging
 import random
 import os
+import boto3
+import PyPDF2
 from mysql.connector import Error
 
 logger = logging.getLogger('candidate_dao')
 
 def getMySQLConnection():
     try:
-        dbhostname = os.environ['db-hostname']
+        dbhostname = os.environ['dbhostname']
         print("Database hostname is " + dbhostname)
         logger.info("Database hostname is " + dbhostname)
         connection_config_dict = {
@@ -62,7 +64,7 @@ def executeDBExecuteQuery(connection, statement):
     except Error as e:
         logger.info(f"Query execution error '{e}' occurred")
 
-def addCandidateDAO(name, address, qualification, jobskill, yearsofexperience):
+def addCandidateDAO(name, address, qualification, jobskill, yearsofexperience, postedresumefilepath):
     print("In Add Candidate DAO Service")
     logger.info("In Add Candidate DAO Service")
     candidateid = random.randint(1,999999)
@@ -80,8 +82,25 @@ def addCandidateDAO(name, address, qualification, jobskill, yearsofexperience):
     connection = getMySQLConnection()
     executeDBInsertQuery(connection, insert_stmt, data)
 
-    logger.info("Successfully inserted the candidate entry for the id " + str(jobid))
-    return "Successfully inserted the candidate entry for the id " + str(jobid)
+    s3_bucket_name = "dina-recruting-agency-resume"
+    region = "ap-south-1"
+    resumeName = str(candidateid) + "_" + name + "_" + postedresumefilepath.split("/", 1)[1]
+    uploadResumeToS3Bucket(s3_bucket_name, region, postedresumefilepath, resumeName)
+
+    logger.info("Successfully inserted the candidate entry for the id " + str(candidateid))
+    return "Successfully inserted the candidate entry for the id " + str(candidateid)
+
+def uploadResumeToS3Bucket(bucketName, region, postedresumefilepath, resumeFileNameInS3):
+    logger.info("Going to update resume with name " + resumeFileNameInS3 + " in S3 bucket " + bucketName)
+    #logger.info("Resume data is ")
+    #logger.info(open(postedresumefilepath).read())
+    session = boto3.Session(
+        aws_access_key_id=os.environ['awsacceskey'],
+        aws_secret_access_key=os.environ['awssecretkey'],
+    )
+    s3 = session.client('s3', region_name=region)
+    data = open(postedresumefilepath, 'rb')
+    s3.upload_fileobj(data, bucketName, resumeFileNameInS3)
 
 def getCandidatesDAO():
     print("In Gets Candidates DB Service")

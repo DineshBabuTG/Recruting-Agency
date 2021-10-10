@@ -10,7 +10,7 @@ logger = logging.getLogger('customer_dao')
 
 def getMySQLConnection():
     try:
-        dbhostname = os.environ['db-hostname']
+        dbhostname = os.environ['dbhostname']
         print("Database hostname is " + dbhostname)
         logger.info("Database hostname is " + dbhostname)
         connection_config_dict = {

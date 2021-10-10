@@ -1,188 +1,86 @@
-2021-10-05 12:14:59,297 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-10-05 12:15:26,882 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:15:26] "GET / HTTP/1.1" 200 -
-2021-10-05 12:15:28,761 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:15:28] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:15:30,209 - webapp - ERROR - Exception on /listcandidates [GET]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/webapp.py", line 62, in listcandidates
-    allCandidatesList = candidateUIService.get_all_candidates()
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/candidateUIService.py", line 27, in get_all_candidates
-    responseData = json.loads(candidates.content)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2021-10-05 12:15:30,213 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:15:30] "[35m[1mGET /listcandidates HTTP/1.1[0m" 500 -
-2021-10-05 12:30:49,895 - webapp - ERROR - Exception on /listcandidates [GET]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/webapp.py", line 62, in listcandidates
-    allCandidatesList = candidateUIService.get_all_candidates()
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/candidateUIService.py", line 27, in get_all_candidates
-    responseData = json.loads(candidates.content)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2021-10-05 12:30:49,901 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:30:49] "[35m[1mGET /listcandidates HTTP/1.1[0m" 500 -
-2021-10-05 12:36:31,429 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:36:31] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:36:34,305 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:36:34] "GET /job HTTP/1.1" 200 -
-2021-10-05 12:36:36,442 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:36:36] "GET /customer HTTP/1.1" 200 -
-2021-10-05 12:36:38,897 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:36:38] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:36:54,073 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:36:54] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:36:56,728 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:36:56] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:42:18,759 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:42:18] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:42:20,163 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:42:20] "GET /listcandidates HTTP/1.1" 200 -
-2021-10-05 12:43:47,271 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:43:47] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:43:49,055 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:43:49] "GET /addcandidate HTTP/1.1" 200 -
-2021-10-05 12:44:04,321 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:44:04] "POST /addcandidate HTTP/1.1" 200 -
-2021-10-05 12:44:07,978 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:44:07] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 12:44:09,683 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:44:09] "GET /listcandidates HTTP/1.1" 200 -
-2021-10-05 12:55:00,401 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-10-05 12:55:05,275 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:55:05] "GET /customer HTTP/1.1" 200 -
-2021-10-05 12:55:06,751 - webapp - ERROR - Exception on /listcustomers [GET]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/webapp.py", line 104, in listcustomers
-    allCustomersList = customerUIService.get_all_customers()
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/customerUIService.py", line 25, in get_all_customers
-    responseData = json.loads(customers.content)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2021-10-05 12:55:06,754 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 12:55:06] "[35m[1mGET /listcustomers HTTP/1.1[0m" 500 -
-2021-10-05 13:02:23,846 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-10-05 13:02:28,675 - webapp - ERROR - Exception on /listcustomers [GET]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/webapp.py", line 104, in listcustomers
-    allCustomersList = customerUIService.get_all_customers()
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/customerUIService.py", line 25, in get_all_customers
-    responseData = json.loads(customers.content)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2021-10-05 13:02:28,680 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:02:28] "[35m[1mGET /listcustomers HTTP/1.1[0m" 500 -
-2021-10-05 13:27:33,532 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2021-10-05 13:27:43,959 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:27:43] "GET /addcustomer HTTP/1.1" 200 -
-2021-10-05 13:27:45,210 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:27:45] "GET /customer HTTP/1.1" 200 -
-2021-10-05 13:27:46,525 - webapp - ERROR - Exception on /listcustomers [GET]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/webapp.py", line 104, in listcustomers
-    allCustomersList = customerUIService.get_all_customers()
-  File "/Users/dgnaneswaran/OneDrive - VMware, Inc/Dina/VM Materials/Take1/Cloud Architect Course works/Cloud Architect Final Project/Recruting-Agency/recruitment-ui-service/webapp/customerUIService.py", line 23, in get_all_customers
-    responseData = json.loads(customers.content)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-2021-10-05 13:27:46,529 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:27:46] "[35m[1mGET /listcustomers HTTP/1.1[0m" 500 -
-2021-10-05 13:30:36,808 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:30:36] "GET /listcustomers HTTP/1.1" 200 -
-2021-10-05 13:32:16,996 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:32:16] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 13:32:19,963 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:32:19] "GET /listcandidates HTTP/1.1" 200 -
-2021-10-05 13:42:39,193 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:42:39] "GET /job HTTP/1.1" 200 -
-2021-10-05 13:42:40,311 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:42:40] "GET /listjobs HTTP/1.1" 200 -
-2021-10-05 13:53:39,904 - werkzeug - WARNING -  * Running on all addresses.
+2021-10-10 12:54:57,834 - werkzeug - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2021-10-05 13:53:39,904 - werkzeug - INFO -  * Running on http://10.104.68.227:5000/ (Press CTRL+C to quit)
-2021-10-05 13:53:55,472 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:53:55] "GET / HTTP/1.1" 200 -
-2021-10-05 13:53:56,990 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:53:56] "GET /job HTTP/1.1" 200 -
-2021-10-05 13:53:58,420 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:53:58] "GET /listjobs HTTP/1.1" 200 -
-2021-10-05 13:54:02,289 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:54:02] "GET /addjob HTTP/1.1" 200 -
-2021-10-05 13:54:03,419 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:54:03] "GET /customer HTTP/1.1" 200 -
-2021-10-05 13:54:04,507 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 13:54:04] "GET /listcustomers HTTP/1.1" 200 -
-2021-10-05 14:45:11,997 - werkzeug - WARNING -  * Running on all addresses.
+2021-10-10 12:54:57,835 - werkzeug - INFO -  * Running on http://10.104.41.156:5000/ (Press CTRL+C to quit)
+2021-10-10 12:55:56,594 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 12:55:56,594 - webapp - INFO - False
+2021-10-10 12:55:56,610 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:55:56] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-10 12:56:52,582 - webapp - INFO - Candidate Page Loaded Successfully
+2021-10-10 12:56:52,583 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:56:52] "GET /candidate HTTP/1.1" 200 -
+2021-10-10 12:56:53,627 - candidateuiservice - INFO - In Get All Candidate method
+2021-10-10 12:56:53,731 - candidateuiservice - INFO - GET Candidates: b'[{"candidateid": 87578, "name": "Dina", "address": "Bangalore", "qualification": "MCA", "jobskill": "Automation", "yearsofexperience": "11"}, {"candidateid": 437841, "name": "Rahul", "address": "WesBengal", "qualification": "BE ECE", "jobskill": "Devops", "yearsofexperience": "6"}, {"candidateid": 338755, "name": "Somu", "address": "Madurai", "qualification": "BSC", "jobskill": "Testing", "yearsofexperience": "3"}, {"candidateid": 197685, "name": "Rahul", "address": "WestBengal", "qualification": "BE EEE", "jobskill": "Developer", "yearsofexperience": "5"}, {"candidateid": 474061, "name": "Balaji", "address": "Avaniyapuram", "qualification": "BE ECE", "jobskill": "Automation Engineer", "yearsofexperience": "6"}, {"candidateid": 576205, "name": "Ramu", "address": "Chennai", "qualification": "BE ECE", "jobskill": "SRE", "yearsofexperience": "3"}]'
+2021-10-10 12:56:53,734 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:56:53] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-10 12:56:57,666 - webapp - INFO - Customer Page Loaded Successfully
+2021-10-10 12:56:57,668 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:56:57] "GET /customer HTTP/1.1" 200 -
+2021-10-10 12:57:00,129 - webapp - INFO - Customer Form Loaded Successfully
+2021-10-10 12:57:00,129 - webapp - INFO - False
+2021-10-10 12:57:00,134 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:57:00] "GET /addcustomer HTTP/1.1" 200 -
+2021-10-10 12:57:01,669 - webapp - INFO - Candidate Page Loaded Successfully
+2021-10-10 12:57:01,670 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:57:01] "GET /candidate HTTP/1.1" 200 -
+2021-10-10 12:57:02,450 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 12:57:02,450 - webapp - INFO - False
+2021-10-10 12:57:02,451 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:57:02] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-10 12:58:08,243 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 12:58:08,243 - webapp - INFO - True
+2021-10-10 12:58:08,244 - webapp - INFO - Add Candidate button clicked
+2021-10-10 12:58:08,244 - webapp - INFO - Name is: Sundar
+2021-10-10 12:58:08,244 - webapp - INFO - Uploaded Resume filaname is: Sundar Resume.pdf
+2021-10-10 12:58:08,245 - candidateuiservice - INFO - In Save Candidate method
+2021-10-10 12:58:08,245 - candidateuiservice - INFO - name Sundar address Hyderabad qualification BTech jobskill Devops Engineer yearsofexperience 4
+2021-10-10 12:58:08,245 - candidateuiservice - INFO - Going to trigger Add Candidate API from web app
+2021-10-10 12:58:08,245 - candidateuiservice - INFO - Resume file path is uploaded-files//Sundar Resume.pdf
+2021-10-10 12:58:08,353 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:58:08] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-10 12:58:52,051 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 12:58:52,051 - webapp - INFO - False
+2021-10-10 12:58:52,052 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 12:58:52] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-10 13:01:16,694 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 13:01:16,694 - webapp - INFO - True
+2021-10-10 13:01:16,695 - webapp - INFO - Add Candidate button clicked
+2021-10-10 13:01:16,695 - webapp - INFO - Name is: Sundar
+2021-10-10 13:01:16,695 - webapp - INFO - Uploaded Resume filaname is: Sundar Resume.pdf
+2021-10-10 13:01:16,696 - candidateuiservice - INFO - In Save Candidate method
+2021-10-10 13:01:16,696 - candidateuiservice - INFO - name Sundar address Hyderabad qualification BTech jobskill Devops Engineer yearsofexperience 4
+2021-10-10 13:01:16,696 - candidateuiservice - INFO - Going to trigger Add Candidate API from web app
+2021-10-10 13:01:16,696 - candidateuiservice - INFO - Resume file path is uploaded-files//Sundar Resume.pdf
+2021-10-10 13:01:18,251 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:01:18] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-10 13:10:49,344 - werkzeug - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2021-10-05 14:45:11,997 - werkzeug - INFO -  * Running on http://10.104.68.227:5000/ (Press CTRL+C to quit)
-2021-10-05 14:45:20,499 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:45:20] "GET /customer HTTP/1.1" 200 -
-2021-10-05 14:45:21,771 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:45:21] "GET /listcustomers HTTP/1.1" 200 -
-2021-10-05 14:46:34,775 - werkzeug - WARNING -  * Running on all addresses.
+2021-10-10 13:10:49,344 - werkzeug - INFO -  * Running on http://10.104.41.156:5000/ (Press CTRL+C to quit)
+2021-10-10 13:10:59,394 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 13:10:59,394 - webapp - INFO - False
+2021-10-10 13:10:59,408 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:10:59] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-10 13:11:00,700 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 13:11:00,701 - webapp - INFO - True
+2021-10-10 13:11:00,701 - webapp - INFO - Add Candidate button clicked
+2021-10-10 13:11:00,701 - webapp - INFO - Name is: Sundar
+2021-10-10 13:11:00,701 - webapp - INFO - Uploaded Resume filaname is: Sundar Resume.pdf
+2021-10-10 13:11:00,702 - candidateuiservice - INFO - In Save Candidate method
+2021-10-10 13:11:00,702 - candidateuiservice - INFO - name Sundar address Hyderabad qualification BTech jobskill Devops Engineer yearsofexperience 4
+2021-10-10 13:11:00,702 - candidateuiservice - INFO - Going to trigger Add Candidate API from web app
+2021-10-10 13:11:00,702 - candidateuiservice - INFO - Resume file path is uploaded-files//Sundar Resume.pdf
+2021-10-10 13:11:00,702 - candidateuiservice - INFO - Resume file name is /Sundar Resume.pdf
+2021-10-10 13:11:01,346 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:11:01] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-10 13:12:20,025 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 13:12:20,025 - webapp - INFO - False
+2021-10-10 13:12:20,025 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:12:20] "GET /addcandidate HTTP/1.1" 200 -
+2021-10-10 13:12:25,768 - werkzeug - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2021-10-05 14:46:34,775 - werkzeug - INFO -  * Running on http://10.104.68.227:5000/ (Press CTRL+C to quit)
-2021-10-05 14:46:38,802 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:46:38] "GET /customer HTTP/1.1" 200 -
-2021-10-05 14:46:39,732 - customeruiservice - INFO - In Get All Customer method
-2021-10-05 14:46:39,772 - customeruiservice - INFO - GET Customers: b'[{"customerid": 479350, "name": "Dinaware", "address": "Bommanahalli"}]'
-2021-10-05 14:46:39,776 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:46:39] "GET /listcustomers HTTP/1.1" 200 -
-2021-10-05 14:46:41,684 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:46:41] "GET /job HTTP/1.1" 200 -
-2021-10-05 14:46:42,884 - jobuiservice - INFO - In Get All Job method
-2021-10-05 14:46:42,914 - jobuiservice - INFO - GET Jobs: b'[{"jobid": 917031, "clientname": "Dina", "jobprofile": "Staff2", "jobrequirements": "Java Cloud"}, {"jobid": 265905, "clientname": "Ram", "jobprofile": "Senior Staff", "jobrequirements": "Cloud"}, {"jobid": 39748, "clientname": "Ramu", "jobprofile": "Sr MTS", "jobrequirements": "Python"}]'
-2021-10-05 14:46:42,916 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:46:42] "GET /listjobs HTTP/1.1" 200 -
-2021-10-05 14:46:43,730 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:46:43] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 14:46:44,568 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:46:44] "GET /listcandidates HTTP/1.1" 200 -
-2021-10-05 14:48:41,078 - werkzeug - WARNING -  * Running on all addresses.
+2021-10-10 13:12:25,769 - werkzeug - INFO -  * Running on http://10.104.41.156:5000/ (Press CTRL+C to quit)
+2021-10-10 13:13:07,426 - webapp - INFO - Candidate Form Loaded Successfully
+2021-10-10 13:13:07,427 - webapp - INFO - True
+2021-10-10 13:13:07,427 - webapp - INFO - Add Candidate button clicked
+2021-10-10 13:13:07,427 - webapp - INFO - Name is: Sundar
+2021-10-10 13:13:07,427 - webapp - INFO - Uploaded Resume file name is: Sundar Resume.pdf
+2021-10-10 13:13:07,428 - candidateuiservice - INFO - In Save Candidate method
+2021-10-10 13:13:07,428 - candidateuiservice - INFO - name Sundar address Hyderabad qualification BTech jobskill Devops Engineer yearsofexperience 4
+2021-10-10 13:13:07,428 - candidateuiservice - INFO - Going to trigger Add Candidate API from web app
+2021-10-10 13:13:07,428 - candidateuiservice - INFO - Resume file path is uploaded-files/Sundar Resume.pdf
+2021-10-10 13:13:07,428 - candidateuiservice - INFO - Resume file name is Sundar Resume.pdf
+2021-10-10 13:13:08,828 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:13:08] "POST /addcandidate HTTP/1.1" 200 -
+2021-10-10 13:13:38,269 - webapp - INFO - Candidate Page Loaded Successfully
+2021-10-10 13:13:38,272 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:13:38] "GET /candidate HTTP/1.1" 200 -
+2021-10-10 13:13:40,657 - candidateuiservice - INFO - In Get All Candidate method
+2021-10-10 13:13:40,689 - candidateuiservice - INFO - GET Candidates: b'[{"candidateid": 87578, "name": "Dina", "address": "Bangalore", "qualification": "MCA", "jobskill": "Automation", "yearsofexperience": "11"}, {"candidateid": 437841, "name": "Rahul", "address": "WesBengal", "qualification": "BE ECE", "jobskill": "Devops", "yearsofexperience": "6"}, {"candidateid": 338755, "name": "Somu", "address": "Madurai", "qualification": "BSC", "jobskill": "Testing", "yearsofexperience": "3"}, {"candidateid": 197685, "name": "Rahul", "address": "WestBengal", "qualification": "BE EEE", "jobskill": "Developer", "yearsofexperience": "5"}, {"candidateid": 474061, "name": "Balaji", "address": "Avaniyapuram", "qualification": "BE ECE", "jobskill": "Automation Engineer", "yearsofexperience": "6"}, {"candidateid": 576205, "name": "Ramu", "address": "Chennai", "qualification": "BE ECE", "jobskill": "SRE", "yearsofexperience": "3"}, {"candidateid": 501886, "name": "Sundar", "address": "Hyderabad", "qualification": "BTech", "jobskill": "Devops Engineer", "yearsofexperience": "4"}]'
+2021-10-10 13:13:40,692 - werkzeug - INFO - 127.0.0.1 - - [10/Oct/2021 13:13:40] "GET /listcandidates HTTP/1.1" 200 -
+2021-10-10 13:42:08,131 - werkzeug - WARNING -  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-2021-10-05 14:48:41,079 - werkzeug - INFO -  * Running on http://10.104.68.227:5000/ (Press CTRL+C to quit)
-2021-10-05 14:48:45,719 - webapp - INFO - Candidate Page Loaded Successfully
-2021-10-05 14:48:45,729 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:48:45] "GET /candidate HTTP/1.1" 200 -
-2021-10-05 14:48:46,605 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:48:46] "GET /listcandidates HTTP/1.1" 200 -
-2021-10-05 14:48:47,592 - webapp - INFO - Customer Page Loaded Successfully
-2021-10-05 14:48:47,594 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:48:47] "GET /customer HTTP/1.1" 200 -
-2021-10-05 14:48:48,503 - customeruiservice - INFO - In Get All Customer method
-2021-10-05 14:48:48,530 - customeruiservice - INFO - GET Customers: b'[{"customerid": 479350, "name": "Dinaware", "address": "Bommanahalli"}]'
-2021-10-05 14:48:48,533 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:48:48] "GET /listcustomers HTTP/1.1" 200 -
-2021-10-05 14:48:49,332 - webapp - INFO - Job Page Loaded Successfully
-2021-10-05 14:48:49,334 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:48:49] "GET /job HTTP/1.1" 200 -
-2021-10-05 14:48:50,205 - jobuiservice - INFO - In Get All Job method
-2021-10-05 14:48:50,233 - jobuiservice - INFO - GET Jobs: b'[{"jobid": 917031, "clientname": "Dina", "jobprofile": "Staff2", "jobrequirements": "Java Cloud"}, {"jobid": 265905, "clientname": "Ram", "jobprofile": "Senior Staff", "jobrequirements": "Cloud"}, {"jobid": 39748, "clientname": "Ramu", "jobprofile": "Sr MTS", "jobrequirements": "Python"}]'
-2021-10-05 14:48:50,236 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:48:50] "GET /listjobs HTTP/1.1" 200 -
-2021-10-05 14:56:48,244 - werkzeug - WARNING -  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-2021-10-05 14:56:48,244 - werkzeug - INFO -  * Running on http://10.104.68.227:5000/ (Press CTRL+C to quit)
-2021-10-05 14:56:57,933 - webapp - INFO - Job Page Loaded Successfully
-2021-10-05 14:56:57,941 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:56:57] "GET /job HTTP/1.1" 200 -
-2021-10-05 14:56:59,082 - jobuiservice - INFO - In Get All Job method
-2021-10-05 14:56:59,126 - jobuiservice - INFO - GET Jobs: b'[{"jobid": 917031, "clientname": "Dina", "jobprofile": "Staff2", "jobrequirements": "Java Cloud"}, {"jobid": 265905, "clientname": "Ram", "jobprofile": "Senior Staff", "jobrequirements": "Cloud"}, {"jobid": 39748, "clientname": "Ramu", "jobprofile": "Sr MTS", "jobrequirements": "Python"}]'
-2021-10-05 14:56:59,129 - werkzeug - INFO - 127.0.0.1 - - [05/Oct/2021 14:56:59] "GET /listjobs HTTP/1.1" 200 -
+2021-10-10 13:42:08,132 - werkzeug - INFO -  * Running on http://10.104.41.156:5000/ (Press CTRL+C to quit)

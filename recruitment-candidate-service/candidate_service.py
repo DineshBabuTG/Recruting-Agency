@@ -9,13 +9,13 @@ logger = logging.getLogger('candidate_service')
 dir_path = os.path.dirname(os.path.realpath(__file__))
 print("dir path is ", dir_path)
 
-def addCandidate(name, address, qualification, jobskill, yearsofexperience):
+def addCandidate(name, address, qualification, jobskill, yearsofexperience, postedresumefilepath):
     print("In Add Candidate API")
     logger.info("In Add Candidate API")
 
     logger.info("name " + str(name) + " address " + str(address) + " qualification " + str(qualification) + " jobskill " + str(jobskill) + " yearsofexperience "  + str(yearsofexperience))
     print("name " + str(name) + " address " + str(address) + " qualification " + str(qualification) + " jobskill " + str(jobskill) + " yearsofexperience "  + str(yearsofexperience))
-    candidate_dao.addCandidateDAO(name, address, qualification, jobskill, yearsofexperience)
+    candidate_dao.addCandidateDAO(name, address, qualification, jobskill, yearsofexperience, postedresumefilepath)
     return "Successfully added the candidate"
 
 def getAllCandidates():

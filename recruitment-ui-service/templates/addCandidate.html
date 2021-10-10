@@ -6,13 +6,14 @@
 
 <div class="row">
 <div class="col-md-6">
-<form method="POST" class="form">
+<form method="POST" class="form" enctype = "multipart/form-data">
   {{ form.csrf_token }}
   {{ render_input(form.name) }}
   {{ render_input(form.address) }}
   {{ render_input(form.qualification) }}
   {{ render_input(form.jobskill) }}
   {{ render_input(form.yearsofexperience) }}
+  {{ render_input(form.uploadresume) }}
 
   <button type="submit" class="btn btn-primary">Add</button>
 </form>

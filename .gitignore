@@ -12,3 +12,5 @@ test-output/
 *.ser
 *.dot
 
+resumefiles/
+uploaded-files/
